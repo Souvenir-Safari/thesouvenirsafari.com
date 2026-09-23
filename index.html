@@ -3,129 +3,239 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Souvenir Safari — Souvenirs Worth the Hunt</title>
-<meta name="description" content="Travel souvenirs, remembrances, and destination-themed goods. Bring the trip home.">
-<style>
-  :root { --olive:#3d4b2b; --khaki:#f2eedd; --terra:#c96f2f; --leaf:#697c48; --ink:#2a3320; }
-  * { box-sizing:border-box; margin:0; }
-  body { font-family:'Verdana', 'Segoe UI', sans-serif; background:var(--khaki); color:var(--ink); line-height:1.65; }
-  .wrap { max-width:980px; margin:0 auto; padding:0 1.5rem; }
-  header { background:var(--olive); color:var(--khaki); border-bottom:5px solid var(--terra); }
-  nav { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 0; }
-  .logo { font-weight:700; font-size:1.2rem; letter-spacing:.1em; text-transform:uppercase; }
-  .logo span { color:var(--terra); }
-  nav a { color:var(--khaki); text-decoration:none; font-size:.86rem; margin-left:1.4rem; }
-  nav a:hover { color:#e0a458; }
-  .hero { padding:4.5rem 0; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center; }
-  .hero h1 { font-size:clamp(1.9rem,4.6vw,2.8rem); line-height:1.2; }
-  .hero h1 em { font-style:normal; color:var(--terra); }
-  .hero p { margin-top:.9rem; max-width:520px; opacity:.9; }
-  .cta { display:inline-block; margin-top:1.6rem; background:var(--terra); color:#fff; font-weight:700; padding:.8rem 1.7rem; text-decoration:none; border-radius:6px; letter-spacing:.03em; }
-  .compass { font-size:5rem; opacity:.9; }
-  @media (max-width:640px){ .hero{grid-template-columns:1fr; text-align:center;} .compass{display:none;} }
-  .stamps { background:#fff; border-top:1px solid #ddd5bf; border-bottom:1px solid #ddd5bf; }
-  .stamps .wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; padding:1rem 1.5rem; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:#8a8a68; }
-  section { padding:3.3rem 0; }
-  h2 { font-size:1.45rem; color:var(--olive); text-transform:uppercase; letter-spacing:.08em; }
-  h2::after { content:""; display:block; width:52px; height:3px; background:var(--terra); margin-top:.5rem; }
-  .sub { color:#6d6d4e; margin:.8rem 0 1.6rem; max-width:600px; }
-  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.2rem; }
-  .card { background:#fff; border:1px solid #ddd5bf; border-radius:10px; padding:1.4rem 1.3rem; }
-  .card h3 { font-size:.98rem; color:var(--olive); text-transform:uppercase; letter-spacing:.05em; margin-bottom:.45rem; }
-  .card h3 .dot { color:var(--terra); }
-  .card p { font-size:.9rem; color:#6d6d4e; }
-  .notice { margin-top:1.7rem; background:#fff; border-left:4px solid var(--leaf); border-radius:6px; padding:1rem 1.3rem; font-size:.92rem; color:#6d6d4e; }
-  form { display:grid; gap:.9rem; max-width:620px; margin-top:1.2rem; }
-  label { font-size:.82rem; font-weight:700; color:var(--olive); letter-spacing:.03em; }
-  input, select, textarea { width:100%; padding:.7rem; border:1px solid #cfc7ac; border-radius:6px; background:#fff; font:inherit; font-size:.95rem; }
-  input:focus, select:focus, textarea:focus { outline:2px solid var(--terra); }
-  .optin { display:flex; gap:.6rem; align-items:flex-start; background:#fff; border:1px solid #ddd5bf; border-radius:6px; padding:.9rem; }
-  .optin input { width:auto; margin-top:.25rem; }
-  .optin span { font-size:.78rem; color:#6d6d4e; line-height:1.5; font-weight:400; letter-spacing:0; }
-  .optin a { color:var(--terra); }
-  button { background:var(--olive); color:var(--khaki); font-weight:700; padding:.85rem 1.7rem; border:0; border-radius:6px; cursor:pointer; letter-spacing:.05em; text-transform:uppercase; }
-  button:hover { background:#4c5d36; }
-  #form-status { font-size:.9rem; margin-top:.4rem; color:var(--terra); }
-  footer { background:var(--olive); color:#cfc7ac; font-size:.82rem; padding:2rem 0; border-top:5px solid var(--terra); }
-  footer .wrap { display:flex; flex-wrap:wrap; gap:.8rem; justify-content:space-between; }
-  footer a { color:#e0a458; text-decoration:none; }
-</style>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<title>Souvenir Safari</title>
+<meta name="description" content="Travel souvenirs for the places people remember. Destination designs, services, and custom work for or from your trip.">
+<link rel="canonical" href="https://thesouvenirsafari.com/">
+<meta property="og:site_name" content="Souvenir Safari">
+<meta property="og:title" content="Souvenir Safari">
+<meta property="og:description" content="Travel souvenirs for the places people remember. Destination designs, services, and custom work for or from your trip.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thesouvenirsafari.com/">
+<meta property="og:image" content="https://shop.thesouvenirsafari.com/cdn/shop/files/hiking-by-golden-gate-bridge.jpg?v=1706945044&width=2400">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="https://shop.thesouvenirsafari.com/cdn/shop/files/Souvenir_Safari_Logo.png?crop=center&height=32&v=1706813215&width=32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&amp;family=Jost:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <nav>
-      <div class="logo">Souvenir <span>Safari</span></div>
-      <div><a href="#finds">The Finds</a><a href="#contact">Contact</a></div>
+<a class="skip" href="#MainContent">Skip to content</a>
+<div class="utility-bar"><p>Travel souvenirs for the places people remember.</p></div>
+<header class="site-header">
+  <div class="header-bar page-width">
+    <a class="logo" href="/"><img src="https://shop.thesouvenirsafari.com/cdn/shop/files/Souvenir_Safari_Logo_Black_on_No_Background.png?v=1706971861&width=180" alt="Souvenir Safari" width="90" height="90"></a>
+    <nav class="desktop-nav" aria-label="Main">
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <div class="shop-item"><a href="https://shop.thesouvenirsafari.com">Shop</a><div class="mega"><div><p>Shop by type</p><a href="https://shop.thesouvenirsafari.com/collections/phone-case">Cases</a>
+<a href="https://shop.thesouvenirsafari.com/collections/drinkware">Drinkware</a>
+<a href="https://shop.thesouvenirsafari.com/collections/prints-and-bags">Prints &amp; bags</a>
+<a href="https://shop.thesouvenirsafari.com/collections/pickleball">Pickleball</a></div><div><p>Destinations</p><a href="https://shop.thesouvenirsafari.com/collections/united-states-of-america">United States</a>
+<a href="https://shop.thesouvenirsafari.com/collections/alaska">Alaska</a>
+<a href="https://shop.thesouvenirsafari.com/collections/national-parks">US National Parks</a>
+<a href="https://shop.thesouvenirsafari.com/collections/paris">Paris</a>
+<a href="https://shop.thesouvenirsafari.com/collections/japan">Japan</a>
+<a href="https://shop.thesouvenirsafari.com/collections/germany">Germany</a></div><div><p>Travel Themes</p><a href="https://shop.thesouvenirsafari.com/collections/hiking-adventures">Hiking Adventures</a>
+<a href="https://shop.thesouvenirsafari.com/collections/wanderlust">Wanderlust</a>
+<a href="https://shop.thesouvenirsafari.com/collections/patriotic">Seasonal</a></div></div></div>
+      <a href="/custom">Custom</a>
+      <a href="/contact">Contact</a>
     </nav>
-    <div class="hero">
-      <div>
-        <h1>Souvenirs worth <em>the hunt</em>.</h1>
-        <p>Travel remembrances and destination-themed goods that actually earn a place on the shelf — because the trip deserved better than a fridge magnet.</p>
-        <a class="cta" href="#contact">Track One Down</a>
+    <details class="mobile-menu">
+      <summary class="menu-toggle" aria-label="Menu"><svg class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true"><path fill="currentColor" d="M1 .5a.5.5 0 1 0 0 1h15.71a.5.5 0 0 0 0-1zM.5 8a.5.5 0 0 1 .5-.5h15.71a.5.5 0 0 1 0 1H1A.5.5 0 0 1 .5 8m0 7a.5.5 0 0 1 .5-.5h15.71a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5"/></svg><svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 17" aria-hidden="true"><path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"/></svg></summary>
+      <div class="mobile-panel">
+        <nav aria-label="Main">
+          <a class="mobile-link" href="/about">About</a>
+          <a class="mobile-link" href="/services">Services</a>
+          <details class="mobile-sub">
+            <summary>Shop <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/></svg></summary>
+            <div>
+              <a href="https://shop.thesouvenirsafari.com">Shop</a>
+              <p class="mobile-label">Shop by type</p>
+<a href="https://shop.thesouvenirsafari.com/collections/phone-case">Cases</a>
+<a href="https://shop.thesouvenirsafari.com/collections/drinkware">Drinkware</a>
+<a href="https://shop.thesouvenirsafari.com/collections/prints-and-bags">Prints &amp; bags</a>
+<a href="https://shop.thesouvenirsafari.com/collections/pickleball">Pickleball</a>
+              <p class="mobile-label">Destinations</p>
+<a href="https://shop.thesouvenirsafari.com/collections/united-states-of-america">United States</a>
+<a href="https://shop.thesouvenirsafari.com/collections/alaska">Alaska</a>
+<a href="https://shop.thesouvenirsafari.com/collections/national-parks">US National Parks</a>
+<a href="https://shop.thesouvenirsafari.com/collections/paris">Paris</a>
+<a href="https://shop.thesouvenirsafari.com/collections/japan">Japan</a>
+<a href="https://shop.thesouvenirsafari.com/collections/germany">Germany</a>
+              <p class="mobile-label">Travel Themes</p>
+<a href="https://shop.thesouvenirsafari.com/collections/hiking-adventures">Hiking Adventures</a>
+<a href="https://shop.thesouvenirsafari.com/collections/wanderlust">Wanderlust</a>
+<a href="https://shop.thesouvenirsafari.com/collections/patriotic">Seasonal</a>
+            </div>
+          </details>
+          <a class="mobile-link" href="/custom">Custom</a>
+          <a class="mobile-link" href="/contact">Contact</a>
+        </nav>
       </div>
-      <img src="/logo-white.png" alt="Souvenir Safari logo" style="height:210px;width:auto;">
-
-    </div>
+    </details>
   </div>
 </header>
+<main id="MainContent">
 
-<div class="stamps"><div class="wrap"><span>Destinations</span><span>&#9670;</span><span>Remembrances</span><span>&#9670;</span><span>Travel Goods</span><span>&#9670;</span><span>Keepsakes</span></div></div>
-
-<section id="finds">
-  <div class="wrap">
-    <h2>The Finds</h2>
-    <p class="sub">Every piece starts with a place. Our designs turn destinations into keepsakes.</p>
-    <div class="cards">
-      <div class="card"><h3><span class="dot">&#9670;</span> Destination Designs</h3><p>Goods themed to the places you've been — and the ones still on the list.</p></div>
-      <div class="card"><h3><span class="dot">&#9670;</span> Remembrances</h3><p>Keepsakes that mark the trip: the year, the place, the story.</p></div>
-      <div class="card"><h3><span class="dot">&#9670;</span> Travel-Life Goods</h3><p>Items for the travel-obsessed everyday — home, desk, and on the road.</p></div>
+<section class="banner banner--large banner--desktop-transparent" aria-label="Souvenir Safari">
+  <div class="banner__media">
+    <img src="https://shop.thesouvenirsafari.com/cdn/shop/files/hiking-by-golden-gate-bridge.jpg?v=1706945044&width=2400" alt="Hiker on a trail with the Golden Gate Bridge in the distance" width="2400" height="1600" fetchpriority="high">
+  </div>
+  <div class="banner__content page-width">
+    <div class="banner__box">
+      <h1>We design travel souvenirs for the places people remember.</h1>
+      <div class="banner__buttons">
+        <a class="button button--primary" href="/custom">Custom</a>
+        <a class="button button--secondary" href="/services">Services</a>
+      </div>
     </div>
-    <div class="notice">Our full catalog is being restocked for a new season of finds. Ask below about current items or a destination you'd like to see.</div>
   </div>
 </section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p class="sub">Call or text <strong>(936) 297-6443</strong>, or send a message.</p>
-    <form id="contact-form">
-      <div><label for="name">Full Name *</label><input id="name" name="name" required autocomplete="name"></div>
-      <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-      <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-      <div><label for="message">Message *</label><textarea id="message" name="message" rows="4" required placeholder="Question, item request, or destination you'd like to see…"></textarea></div>
-      <label class="optin"><input type="checkbox" id="sms_optin" name="sms_optin" value="yes">
-        <span>I agree to receive text messages from Souvenir Safari (a brand of Advisors Group International Inc) under the <strong>Client Care Notifications</strong> program (responses to inquiries, order confirmations, shipping updates, requests for missing information). Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of any purchase. See our <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Use</a>.</span></label>
-      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px">
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD8MVIhSPLH80f6N" data-theme="auto"></div>
-      <div><button type="submit">Send Message</button><div id="form-status" role="status"></div></div>
-    </form>
+<section class="section">
+  <div class="page-width">
+    <div class="section-head">
+      <h2>The hunt is the place</h2>
+      <p>Cases, drinkware, prints, and bags for travelers and the people who buy for them. Custom design starts here. Ready designs live on the shop, under the same names you will see over there.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      <article class="text-card">
+        <h3><a href="/services#destination-designs">Destination designs</a></h3>
+        <p>A park, a city, a trail — drawn onto a piece you will actually carry or keep on the shelf.</p>
+      </article>
+      <article class="text-card">
+        <h3><a href="/custom">Custom</a></h3>
+        <p>For or from your trip. Tell us the place, the product type, and the idea. We design it with you.</p>
+      </article>
+      <article class="text-card">
+        <h3><a href="/services#gifts">Gifts for travelers</a></h3>
+        <p>Match a destination they love to a case, a mug, a print, or a bag they will use after they unpack.</p>
+      </article>
+    </div>
   </div>
 </section>
+<section class="section band-white">
+  <div class="page-width">
+    <div class="section-head">
+      <h2>Shop by type</h2>
+      <p>Ready designs, on the shop.</p>
+    </div>
+    <div class="card-grid card-grid--4">
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/phone-case"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/10469780200359222726_2048.jpg?v=1748138658&width=900" alt="Niagara Falls phone case" width="900" height="900"></span><span class="collection-card__title">Cases</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/drinkware"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/white-glossy-mug-white-20-oz-front-view-66654f3371927.jpg?v=1717915462&width=900" alt="Alaska mountain watercolor mug" width="900" height="900"></span><span class="collection-card__title">Drinkware</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/prints-and-bags"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/NYC-Statue-of-Liberty_Posters_Front.jpg?v=1748183805&width=900" alt="Statue of Liberty watercolor art print" width="900" height="900"></span><span class="collection-card__title">Prints &amp; bags</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/pickleball"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/7586044272069953185_2048.jpg?v=1748148811&width=900" alt="Olympic National Park pickleball paddles" width="900" height="900"></span><span class="collection-card__title">Pickleball</span></a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="page-width">
+    <div class="section-head">
+      <h2>Destinations</h2>
+      <p>Places the collections already know.</p>
+    </div>
+    <div class="card-grid card-grid--6">
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/united-states-of-america"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/11461056730913514765_2048.jpg?v=1748103821&width=900" alt="New York City skyline cup" width="900" height="900"></span><span class="collection-card__title">United States</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/alaska"><span class="collection-card__media"><img src="https://shop.thesouvenirsafari.com/cdn/shop/files/tough-case-for-iphone-glossy-iphone-15-pro-max-front-6665cc6d87ae1.jpg?v=1717947509&width=900" alt="Tracy Arm Fjord phone case" width="900" height="900"></span><span class="collection-card__title">Alaska</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/national-parks"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/17152133430325664790_2048.jpg?v=1748148907&width=900" alt="Redwood National Park pickleball set" width="900" height="900"></span><span class="collection-card__title">US National Parks</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/paris"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/tough-case-for-iphone-glossy-iphone-15-pro-max-front-6665cec994936.jpg?v=1717948117&width=900" alt="Arc de Triomphe phone case" width="900" height="900"></span><span class="collection-card__title">Paris</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/japan"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/stainless-steel-water-bottle-white-17-oz-front-6665e1b71f9f0.jpg?v=1717952960&width=900" alt="Mount Fuji stainless steel bottle" width="900" height="900"></span><span class="collection-card__title">Japan</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/germany"><span class="collection-card__media"><img src="https://cdn.shopify.com/s/files/1/0855/2562/7160/files/tough-case-for-iphone-glossy-iphone-11-front-666609d07d4a7.jpg?v=1717963228&width=900" alt="Neuschwanstein Castle phone case" width="900" height="900"></span><span class="collection-card__title">Germany</span></a>
+    </div>
+  </div>
+</section>
+<section class="section band-white">
+  <div class="page-width">
+    <div class="section-head">
+      <h2>Travel Themes</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      <a class="collection-card collection-card--cover" href="https://shop.thesouvenirsafari.com/collections/hiking-adventures"><span class="collection-card__media"><img src="https://shop.thesouvenirsafari.com/cdn/shop/files/hiking-by-golden-gate-bridge.jpg?v=1706945044&width=2400" alt="Hiker on a trail with the Golden Gate Bridge behind them" width="900" height="900"></span><span class="collection-card__title">Hiking Adventures</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/wanderlust"><span class="collection-card__media"><img src="https://shop.thesouvenirsafari.com/cdn/shop/files/tough-case-for-iphone-glossy-iphone-11-front-6665cd37efde8.jpg?v=1717947716&width=900" alt="Eiffel Tower in fall phone case" width="900" height="900"></span><span class="collection-card__title">Wanderlust</span></a>
+      <a class="collection-card" href="https://shop.thesouvenirsafari.com/collections/patriotic"><span class="collection-card__media collection-card__media--plain">A season of travel, still a place.</span><span class="collection-card__title">Seasonal</span></a>
+    </div>
+  </div>
+</section>
+<section class="section band-taupe">
+  <div class="page-width">
+    <div class="section-head">
+      <h2>Custom</h2>
+      <p>For or from your trip. Share the destination, the kind of piece, and the idea — a photo you remember, a sketch, or a few sentences. Our team designs it and writes back.</p>
+    </div>
+    <a class="button button--primary" href="/custom">Custom</a>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Souvenir Safari",
+  "url": "https://thesouvenirsafari.com/",
+  "logo": "https://shop.thesouvenirsafari.com/cdn/shop/files/Souvenir_Safari_Logo_Black_on_No_Background.png?v=1706971861&width=180",
+  "telephone": "+1-936-297-6443",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Advisors Group International Inc"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montgomery",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  }
+}
+</script>
 
-<footer>
-  <div class="wrap">
-    <div>&copy; 2026 Souvenir Safari, a brand of Advisors Group International Inc &middot; Montgomery, Texas &middot; (936) 297-6443</div>
-    <div><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Use</a></div>
+</main>
+<footer class="site-footer">
+  <div class="page-width footer-grid">
+    <div class="footer-brand">
+      <h2>Souvenir Safari</h2>
+      <p>Travel souvenirs for the places people remember.</p>
+      <p><a href="tel:+19362976443">(936) 297-6443</a></p>
+      <p>Montgomery, Texas</p>
+    </div>
+    <div>
+      <h2>Visit</h2>
+      <ul><li><a href="/about">About</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/custom">Custom</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a href="/learn">Learn</a></li></ul>
+    </div>
+    <div>
+      <h2>Shop</h2>
+      <ul><li><a href="https://shop.thesouvenirsafari.com">Shop</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/phone-case">Cases</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/drinkware">Drinkware</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/prints-and-bags">Prints &amp; bags</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/pickleball">Pickleball</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/pages/wholesale">Wholesale</a></li></ul>
+    </div>
+    <div>
+      <h2>Destinations</h2>
+      <ul><li><a href="https://shop.thesouvenirsafari.com/collections/united-states-of-america">United States</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/alaska">Alaska</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/national-parks">US National Parks</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/paris">Paris</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/japan">Japan</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/germany">Germany</a></li></ul>
+      <p class="footer-label">Travel Themes</p>
+      <ul><li><a href="https://shop.thesouvenirsafari.com/collections/hiking-adventures">Hiking Adventures</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/wanderlust">Wanderlust</a></li>
+<li><a href="https://shop.thesouvenirsafari.com/collections/patriotic">Seasonal</a></li></ul>
+    </div>
+  </div>
+  <div class="page-width footer-base">
+    <small>&copy; 2026 Souvenir Safari, a brand of Advisors Group International Inc</small>
+    <ul>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+      <li><a href="/terms.html">Terms of Use</a></li>
+    </ul>
   </div>
 </footer>
-
-<script>
-const ENDPOINT = "https://agii-vapi-bridge-9383.twil.io/web-contact";
-document.getElementById("contact-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const f = e.target, s = document.getElementById("form-status");
-  const data = Object.fromEntries(new FormData(f).entries());
-  data.business = "SS"; data.source = "thesouvenirsafari.com";
-  if (!data.email && !data.phone) { s.textContent = "Please provide an email or phone number so we can reach you."; return; }
-  if (ENDPOINT.startsWith("PENDING")) { s.textContent = "Our online form is being upgraded — please call or text (936) 297-6443."; return; }
-  try {
-    const r = await fetch(ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data) });
-    if (!r.ok) throw 0;
-    f.reset(); s.textContent = "Thanks — message received! We'll be in touch shortly.";
-  } catch { s.textContent = "Something went wrong. Please call or text (936) 297-6443."; }
-});
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
