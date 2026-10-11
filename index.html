@@ -170,21 +170,46 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Souvenir Safari",
-  "url": "https://thesouvenirsafari.com/",
-  "logo": "https://shop.thesouvenirsafari.com/cdn/shop/files/Souvenir_Safari_Logo_Black_on_No_Background.png?v=1706971861&width=180",
-  "telephone": "+1-936-297-6443",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Advisors Group International Inc"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Montgomery",
-    "addressRegion": "TX",
-    "addressCountry": "US"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thesouvenirsafari.com/#organization",
+      "name": "Souvenir Safari",
+      "url": "https://thesouvenirsafari.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shop.thesouvenirsafari.com/cdn/shop/files/Souvenir_Safari_Logo_Black_on_No_Background.png?v=1706971861&width=180"
+      },
+      "description": "Travel souvenirs for the places people remember. Destination designs, services, and custom work for or from your trip.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Advisors Group International Inc"
+      },
+      "sameAs": [
+        "https://shop.thesouvenirsafari.com/",
+        "https://x.com/souvenirsafari"
+      ],
+      "telephone": "+19362976443",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "43 Brookgreen Cir N",
+        "addressLocality": "Montgomery",
+        "addressRegion": "TX",
+        "postalCode": "77356",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thesouvenirsafari.com/#website",
+      "name": "Souvenir Safari",
+      "url": "https://thesouvenirsafari.com/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://thesouvenirsafari.com/#organization"
+      }
+    }
+  ]
 }
 </script>
 
@@ -196,6 +221,7 @@
       <p>Travel souvenirs for the places people remember.</p>
       <p><a href="tel:+19362976443">(936) 297-6443</a></p>
       <p>Montgomery, Texas</p>
+      <p><a href="https://x.com/souvenirsafari" rel="me noopener" target="_blank">X</a></p>
     </div>
     <div>
       <h2>Visit</h2>
