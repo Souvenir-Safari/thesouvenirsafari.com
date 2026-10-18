@@ -1,6 +1,43 @@
 (function () {
   var ENDPOINT = "https://agii-vapi-bridge-9383.twil.io/web-contact";
 
+  function getTurnstileToken(form) {
+    var input = form.querySelector('[name="cf-turnstile-response"]');
+    if (input && input.value) return input.value;
+    if (window.turnstile && typeof window.turnstile.getResponse === "function") {
+      try { return window.turnstile.getResponse() || ""; } catch (ignore) { return ""; }
+    }
+    return "";
+  }
+
+  function resetTurnstile() {
+    if (window.turnstile) {
+      try { window.turnstile.reset(); } catch (ignore) {}
+    }
+  }
+
+  function setIntakeSubmitEnabled(form, enabled) {
+    var button = form.querySelector("button[type=submit]");
+    if (!button) return;
+    button.disabled = Boolean(form._intakeSending) || !enabled;
+  }
+
+  window.onTurnstileSuccess = function () {
+    document.querySelectorAll("form[data-intake]").forEach(function (form) {
+      setIntakeSubmitEnabled(form, true);
+    });
+  };
+  window.onTurnstileExpire = function () {
+    document.querySelectorAll("form[data-intake]").forEach(function (form) {
+      setIntakeSubmitEnabled(form, false);
+    });
+  };
+  window.onTurnstileError = function () {
+    document.querySelectorAll("form[data-intake]").forEach(function (form) {
+      setIntakeSubmitEnabled(form, false);
+    });
+  };
+
   document.addEventListener("keydown", function (event) {
     if (event.key !== "Escape") return;
     document.querySelectorAll("details[open]").forEach(function (item) {
@@ -21,6 +58,8 @@
   document.querySelectorAll("form[data-intake]").forEach(function (form) {
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
+      if (form._intakeSending) return;
+
       var status = form.querySelector("[data-status]");
       var button = form.querySelector("button[type=submit]");
       var data = Object.fromEntries(new FormData(form).entries());
@@ -56,6 +95,14 @@
         return;
       }
 
+      var token = getTurnstileToken(form);
+      if (!token) {
+        status.textContent = "Please wait for the verification check to finish, then press Send.";
+        return;
+      }
+      data["cf-turnstile-response"] = token;
+
+      form._intakeSending = true;
       button.disabled = true;
       status.textContent = "Sending…";
 
@@ -67,14 +114,14 @@
         });
         if (!response.ok) throw new Error("Request failed");
         form.reset();
-        if (window.turnstile) {
-          try { window.turnstile.reset(); } catch (ignore) {}
-        }
+        resetTurnstile();
         status.textContent = "Thanks — message received. We'll be in touch shortly.";
       } catch (error) {
         status.textContent = "Something went wrong. Please call or text (936) 297-6443.";
+        resetTurnstile();
       } finally {
-        button.disabled = false;
+        form._intakeSending = false;
+        setIntakeSubmitEnabled(form, Boolean(getTurnstileToken(form)));
       }
     });
   });
