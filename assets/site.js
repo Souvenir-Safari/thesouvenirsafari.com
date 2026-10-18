@@ -56,8 +56,6 @@
   });
 
   document.querySelectorAll("form[data-intake]").forEach(function (form) {
-    setIntakeSubmitEnabled(form, Boolean(getTurnstileToken(form)));
-
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
       if (form._intakeSending) return;
